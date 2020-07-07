@@ -33,7 +33,6 @@ public class ProductsController {
 	}
 	
 	@GetMapping("/products/{id}")
-	@ResponseBody
 	public Product getProductById(@PathVariable (value = "id") int id) {
 		return productsService.getProduct(id);
 	}
@@ -44,7 +43,6 @@ public class ProductsController {
 	}
 	
 	@PatchMapping("/products/{id}")
-	@ResponseBody
 	public Product updaProduct(@PathVariable int id, @RequestBody Product product) {
 		return productsService.updateProduct(id, product);
 	}
